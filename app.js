@@ -17,32 +17,6 @@ document.querySelector("form").addEventListener("submit", function (e) {
 });
 
 function processAddress(address) {
-  // if (fetchInProgress) {
-  //   // If fetch is in progress, ignore the click
-  //   return;
-  // }
-  
-  // // Clear existing table content
-  // errorContainer.innerHTML='';
-  
-  // var headerRow = document.createElement("tr");
-  
-  // var addressHeader = document.createElement("th");
-  // addressHeader.textContent = "Address";
-  // headerRow.appendChild(addressHeader);
-  
-  // var pendingRewardHeader = document.createElement("th");
-  // pendingRewardHeader.textContent = "Pending Reward";
-  // headerRow.appendChild(pendingRewardHeader);
-  
-  // var harvestedRewardHeader = document.createElement("th");
-  // harvestedRewardHeader.textContent = "Harvested Reward";
-  // headerRow.appendChild(harvestedRewardHeader);
-  
-  // resultTable.appendChild(headerRow);
-  
-  // fetchInProgress = true;
-  
   var api_address = api + address;
   fetch(api_address)
   .then(response => response.json())
@@ -86,8 +60,6 @@ function processAddress(address) {
   });
 }
 function results() {
-
-  SearchBTN
   if (fetchInProgress) {
     // If fetch is in progress, ignore the click
     return;
